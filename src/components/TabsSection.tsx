@@ -11,7 +11,8 @@ export function TabsSection() {
     <div className="bg-white text-black py-12">
       <div className="container mx-auto px-4">
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="bg-background text-foreground border-b border-border rounded-none h-auto p-0 mb-8">
+          <div className="flex justify-center mb-8">
+            <TabsList className="bg-background text-foreground border-b border-border rounded-none h-auto p-0">
             <TabsTrigger
               value="overview"
               className="data-[state=active]:bg-white data-[state=active]:text-black rounded-none border-b-2 border-transparent data-[state=active]:border-black"
@@ -49,6 +50,7 @@ export function TabsSection() {
               Processus
             </TabsTrigger>
           </TabsList>
+          </div>
 
           <TabsContent value="overview">
             <Overview />

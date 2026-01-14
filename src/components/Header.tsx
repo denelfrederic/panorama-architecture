@@ -1,17 +1,29 @@
 import { Calendar, Home } from "lucide-react";
 import { projectData } from "@/data/content";
+import logo from "@/assets/logo.svg";
 
 export function Header() {
   return (
     <header className="bg-background border-b border-border">
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div className="flex items-center gap-2 text-foreground/80 text-sm">
-            <Calendar className="h-4 w-4" />
-            <span>Dernière mise à jour : {projectData.lastUpdate}</span>
+          <div className="flex items-center gap-4">
+            <a href={projectData.homeUrl} className="flex items-center">
+              <div className="bg-white p-2 rounded">
+                <img 
+                  src={logo} 
+                  alt="Panorama Architecture" 
+                  className="h-8 md:h-10 w-auto"
+                />
+              </div>
+            </a>
           </div>
           
           <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 text-foreground/80 text-sm">
+              <Calendar className="h-4 w-4" />
+              <span>Dernière mise à jour : {projectData.lastUpdate}</span>
+            </div>
             <a
               href={projectData.homeUrl}
               className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-9 rounded-md px-3 border border-input bg-secondary hover:bg-secondary/80 text-secondary-foreground"
