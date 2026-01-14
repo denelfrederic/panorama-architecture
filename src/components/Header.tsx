@@ -1,4 +1,4 @@
-import { Calendar, Home, Play, Video } from "lucide-react";
+import { Calendar, Home } from "lucide-react";
 import { projectData } from "@/data/content";
 
 export function Header() {
@@ -12,20 +12,6 @@ export function Header() {
           </div>
           
           <div className="flex items-center gap-4">
-            <a
-              href={projectData.podcastUrl}
-              className="flex items-center gap-2 text-foreground hover:text-foreground/80 transition-colors"
-            >
-              <Play className="h-5 w-5" />
-              <span className="text-sm">Podcast</span>
-            </a>
-            <a
-              href={projectData.animationUrl}
-              className="flex items-center gap-2 text-foreground hover:text-foreground/80 transition-colors"
-            >
-              <Video className="h-5 w-5" />
-              <span className="text-sm">Animation</span>
-            </a>
             <a
               href={projectData.homeUrl}
               className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-9 rounded-md px-3 border border-input bg-secondary hover:bg-secondary/80 text-secondary-foreground"

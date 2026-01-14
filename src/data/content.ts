@@ -16,12 +16,12 @@ export const projectData = {
   title: "Site de suivi du projet Panorama Architecture",
   subtitle: "Optimisation de l'Agence par l'IA",
   homeUrl: "https://panorama-architecture.com/agence",
-  podcastUrl: "#", // Placeholder
-  animationUrl: "#", // Placeholder
+  podcastUrl: "/podcast.m4a",
+  animationUrl: "/anim.mp4",
 };
 
 export const kpiMetrics = {
-  processusOptimiser: "4",
+  processusOptimiser: "8",
   gainTemps: "60-80%",
   tauxTransformation: "2,5%",
 };
