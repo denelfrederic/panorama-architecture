@@ -1,5 +1,4 @@
 import { Calendar, Home, Play, Video } from "lucide-react";
-import { Button } from "./ui/button";
 import { projectData } from "@/data/content";
 
 export function Header() {
@@ -27,17 +26,13 @@ export function Header() {
               <Video className="h-5 w-5" />
               <span className="text-sm">Animation</span>
             </a>
-            <Button
-              variant="outline"
-              size="sm"
-              asChild
-              className="bg-secondary hover:bg-secondary/80"
+            <a
+              href={projectData.homeUrl}
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-9 rounded-md px-3 border border-input bg-secondary hover:bg-secondary/80 text-secondary-foreground"
             >
-              <a href={projectData.homeUrl}>
-                <Home className="h-4 w-4 mr-2" />
-                Accueil
-              </a>
-            </Button>
+              <Home className="h-4 w-4 mr-2" />
+              Accueil
+            </a>
           </div>
         </div>
         
